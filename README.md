@@ -30,30 +30,53 @@ Data Sources
 
 This project does not use Kaggle-hosted data, per course requirements. All data comes from public software engineering research sources:
 
-SourceDescriptionLinkNASA Metrics Data Program / tera-PROMISESoftware metrics + defect labels (CM1, KC1, PC1, JM1, KC2)http://promise.site.uottawa.ca/SERepository/Jureczko/PROMISE OO defect datasetChidamber & Kemerer OO metrics across open-source Java projectshttp://promise.site.uottawa.ca/SERepository/GitHub issue trackers & commit historyCode churn and defect-linkage mined via the SZZ algorithmMined directly per-project (see src/)Public unified Java bug dataset (Tóth et al., 2016)Cross-validation of metric definitionshttps://github.com/sedeeai/unified-bug-dataset
-
-Full dataset files are not stored in this repository. Instead, data/ contains scripts to fetch/load the data directly from source, plus a small representative sample so the structure is visible without downloading everything.
-
-Planned Pipeline
+SourceDescriptionLinkNASA Metrics Data Program / tera-PROMISESoftware metrics + defect labels (CM1, KC1, PC1, JM1, KC2)
 
 
-Data ingestion — pull metrics + defect labels from the sources above
-Preprocessing — handle missing values, encode categorical fields, address class imbalance with SMOTE
-Modeling — train Logistic Regression (baseline), Random Forest, and XGBoost
-Evaluation — compare models using Precision, Recall, F1-score, and ROC-AUC via stratified k-fold cross-validation
-Explainability — apply SHAP (global + local) and LIME to the best-performing model
-Interpretation — compare SHAP feature rankings against established software engineering literature
+## Dataset
+
+Datasets used:
+
+- KC1
+- KC2
+- CM1
+- JM1
+- PC1
+
+Source:
+NASA Metrics Data Program
 
 
-Reproducing This Work
+## Methodology
 
-Once code is added, this section will include:
+The workflow includes:
+
+1. Data preprocessing
+2. Exploratory data analysis
+3. Handling class imbalance using SMOTE
+4. Model training
+5. Performance evaluation
+6. SHAP-based explainability
 
 
-Required Python version and libraries (requirements.txt)
-Steps to run data ingestion scripts
-Steps to train and evaluate models
-Steps to generate SHAP/LIME explanations
+## Models
+
+Implemented models:
+
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+
+## Evaluation Metrics
+
+Models are evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
 
 
 (This repository is being built alongside the coursework; sections above will be filled in as each stage is completed.)
