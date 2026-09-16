@@ -11,11 +11,10 @@ The goal is a defect prediction system that is both accurate and transparent eno
 Research Questions
 
 
-RQ1: Which software metrics have the greatest influence on predicting whether a module is defect-prone?
-RQ2: How do Logistic Regression, Random Forest, and XGBoost compare in defect prediction performance (Accuracy, Precision, Recall, F1, ROC-AUC)?
-RQ3: Which metrics does SHAP identify as most important, and are these consistent with established software engineering findings?
-RQ4: Does applying SMOTE to address class imbalance improve defect identification compared to training without it?
-
+RQ1: Which software metrics have the greatest influence on predicting whether a software module is defect-prone?
+RQ2: How do Logistic Regression, Random Forest, and XGBoost compare in their ability to predict software defects when evaluated using Accuracy, Precision, Recall, F1-score, and ROC-AUC?
+RQ3:Which software metrics are identified by SHAP as the most important contributors to defect predictions, and how do these findings compare with established software engineering knowledge?
+RQ4: Does applying SMOTE to address class imbalance improve the defect prediction performance of machine learning models compared with models trained without SMOTE?
 
 Repository Structure
 
